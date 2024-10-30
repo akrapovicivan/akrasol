@@ -24,9 +24,8 @@
 
 ### Semester Assignments
 
-- Link to Assignment 1: [**Assignment 1**](assignments/1_Assignment.mp4) <!-- Replace with actual URL -->
-- Link to Assignment 2: [**Assignment 2**](URL_TO_ASSIGNMENT_2) <!-- Replace with actual URL -->
-- Link to Assignment 3: [**Assignment 3**](URL_TO_ASSIGNMENT_3) <!-- Replace with actual URL -->
+- Assignment 1: [**1. Figma Essentials**](assignments/1_Assignment.mp4) <!-- Replace with actual URL -->
+- Assignment 2: [**2. User personas and information architecture**](https://elemental-harbor-143.notion.site/SolarWise-12fdaa460b8480e3b6e8d8682f2153b0?pvs=4) <!-- Replace with actual URL -->
 <!-- Add more assignments as necessary -->
 
 ## Project Requirements
