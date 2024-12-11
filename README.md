@@ -27,6 +27,7 @@
 - Assignment 1: [**1. Figma Essentials**](assignments/1_Assignment.mp4) <!-- Replace with actual URL -->
 - Assignment 2: [**2. User personas and information architecture**](https://elemental-harbor-143.notion.site/SolarWise-12fdaa460b8480e3b6e8d8682f2153b0?pvs=4) <!-- Replace with actual URL -->
 - Assignment 3: [**3. Next.js - Deploying Application**](https://solar-wise-theta.vercel.app/)
+- Assignment 4: [**4. Low/High-fidelity prototype**](assignments/4_Assignment/)
 
 ## Project Requirements
 
