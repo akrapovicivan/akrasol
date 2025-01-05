@@ -34,19 +34,19 @@ const navigation = [
 
 export default function Navigation() {
     return (
-        <nav className="bg-gray-800 text-white">
-            <div className="container mx-auto px-4">
-                <ul className="flex space-x-8 py-4">
+        <nav className="text-[#616161]">
+            <div className="container mx-auto">
+                <ul className="flex space-x-20">
                     {navigation.map((item) => (
                         <li key={item.name} className="relative group">
-                            <Link href={item.href} className="hover:text-yellow-400 transition duration-200">
+                            <Link href={item.href} className="hover:text-[#176FD3] transition duration-200">
                                 {item.name}
                             </Link>
                             {item.subroutes && (
                                 <ul className="absolute left-0 mt-2 w-48 bg-gray-700 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200">
                                     {item.subroutes.map((subitem) => (
                                         <li key={subitem.name}>
-                                            <Link href={subitem.href} className="block px-4 py-2 hover:bg-gray-600 hover:text-yellow-400 transition duration-200">
+                                            <Link href={subitem.href} className="block px-4 py-2 hover:bg-gray-600 hover:text-[#176FD3] transition duration-200">
                                                 {subitem.name}
                                             </Link>
                                         </li>
