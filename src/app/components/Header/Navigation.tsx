@@ -57,8 +57,8 @@ export default function Navigation({ isSidebar = false }) {
                             <ul
                                 className={`${
                                     isSidebar
-                                        ? "mt-2 pl-4 space-y-2"
-                                        : "absolute left-0 mt-2 w-48 bg-gray-700 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+                                        ? "mt-2 p-8 space-y-2"
+                                        : "absolute left-0 mt-2 w-48 bg-white shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200"
                                 }`}
                             >
                                 {item.subroutes.map((subitem) => (
@@ -68,7 +68,7 @@ export default function Navigation({ isSidebar = false }) {
                                             className={`block ${
                                                 isSidebar
                                                     ? "text-sm hover:underline"
-                                                    : "px-4 py-2 hover:bg-gray-600 hover:text-[#176FD3] transition duration-200"
+                                                    : "px-4 py-2 hover:text-[#176FD3] transition duration-200"
                                             }`}
                                         >
                                             {subitem.name}
