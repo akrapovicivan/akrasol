@@ -1,7 +1,11 @@
+"use client"
+
 import { apiUrlBase } from '@/shared/constants';
 import { Offer } from '@/shared/interfaces';
 import axios from 'axios';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { useEffect, useState } from 'react';
 
 const getOffers = async () => {
     try {
@@ -13,14 +17,35 @@ const getOffers = async () => {
     }
 };
 
-export default async function OffersLayout({ children }: { children: React.ReactNode }) {
-    const offers: Offer[] = await getOffers();
+export default function OffersLayout({ children }: { children: React.ReactNode }) {
+    const [offers, setOffers] = useState<Offer[]>([]);
+    
+    const pathname = usePathname();
+
+    useEffect(() => {
+        const fetchOffers = async () => {
+            try {
+                const offers = await getOffers();
+                setOffers(offers);
+            } catch (error) {
+                console.error("Error in fetchOffers:", error);
+            }
+        };
+
+        fetchOffers();
+    }, []);
+
+
+
     return (
-        <div>
+        <div className='px-48 max-[888px]:px-16'>
             <h1>Offers</h1>
-            <ul style={{ display: 'flex', listStyle: 'none', gap: '1rem' }}>
+            <ul className="flex flex-wrap text-sm font-medium text-center text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400" style={{ listStyle: 'none', gap: '1rem' }}>
                 {offers.map((offer: Offer) => (
-                    <li key={offer.id}>
+                    <li key={offer.id} className={pathname == `/offers/${offer.id}` 
+                                ? "inline-block p-4 rounded-t-lg active text-blue-600 bg-gray-100 dark:bg-gray-800 dark:text-blue-500"
+                                : "me-2 inline-block p-4 rounded-t-lg hover:text-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 dark:hover:text-gray-300"
+                        }>
                         <Link href={`/offers/${offer.id}`}>{offer.attributes.Name}</Link>
                     </li>
                 ))}

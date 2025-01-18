@@ -16,7 +16,7 @@ export default async function OfferDetailsPage({ params }: { params: { offerId: 
 
     return (
         <div>
-            <h1>{offer.attributes.Name}</h1>
+            <h2>{offer.attributes.Name}</h2>
             <p>{offer.attributes.Description}</p>
             <p>Ending on: {offer.attributes.EndingOn}</p>
         </div>
