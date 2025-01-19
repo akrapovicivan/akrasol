@@ -29,7 +29,7 @@
 - Assignment 3: [**3. Next.js - Deploying Application**](https://solar-wise-theta.vercel.app/)
 - Assignment 4: [**4. Low/High-fidelity prototype**](assignments/4_Assignment/)
 - Assignment 5: [**5. Next.js - Dynamic routes, data fetching**](https://solar-wise-theta.vercel.app/offers)
-- Assignment 6: 6. Full Responsive Page Coding: [**Desktop**](assignments/4_Assignment/high-fidelity-homepage-desktop.png) & [**Mobile**](assignments/6_Assignment_/high-fidelity-homepage-mobile.png)
+- Assignment 6: 6. Full Responsive Page Coding: [**Desktop**](assignments/4_Assignment/high-fidelity-homepage-desktop.png) & [**Mobile**](assignments/6_Assignment/high-fidelity-homepage-mobile.png)
 
 ## Project Requirements
 
