@@ -13,18 +13,18 @@ export default function HomePage() {
                     Fames ipsum pulvinar dictumst adipiscing et, augue phasellus id sapien.</p>
                 </div>
             </div>
-            <div className="p-8 px-48 max-[888px]:px-16 flex flex-row justify-center gap-x-20">
-                <div className="flex flex-col w-[120px]">
+            <div className="p-8 px-48 max-[888px]:px-16 flex flex-col justify-center gap-x-20 gap-y-8 md:flex-row md:w-full">
+                <div className="flex flex-row gap-4 justify-center md:flex-col">
                     <FontAwesomeIcon icon={faBolt} size="2x" className="text-[#616161]" />
-                    <span className='text-sm text-[#616161] mt-3 text-center'>Power your home</span>
+                    <span className='text-sm text-[#616161] text-center inline-flex items-center'>Power your home</span>
                 </div>
-                <div className="flex flex-col w-[120px]">
+                <div className="flex flex-row gap-4 justify-center md:flex-col">
                     <FontAwesomeIcon icon={faSackDollar} size="2x" className="text-[#616161]" />
-                    <span className='text-sm text-[#616161] mt-3 text-center'>Save money</span>
+                    <span className='text-sm text-[#616161] text-center inline-flex items-center'>Save money</span>
                 </div>
-                <div className="flex flex-col w-[120px]">
+                <div className="flex flex-row gap-4 justify-center md:flex-col md:items-center">
                     <FontAwesomeIcon icon={faLeaf} size="2x" className="text-[#616161]" />
-                    <span className='text-sm text-[#616161] mt-3 text-center'>No emmisions</span>
+                    <span className='text-sm text-[#616161] text-center inline-flex items-center'>No emmisions</span>
                 </div>
             </div>
             <div className='px-48 max-[888px]:px-16'>
