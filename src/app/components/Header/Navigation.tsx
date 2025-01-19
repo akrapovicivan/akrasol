@@ -40,12 +40,8 @@ export default function Navigation({ isSidebar = false }) {
 
     const navigation = [
         {
-            name: "Home",
-            href: "/",
-        },
-        {
             name: "Offers",
-            href: "/offers",
+            href: offersSubroutes.at(0)?.href ?? "/offers",
             subroutes: offersSubroutes,
         },
         {
@@ -68,13 +64,9 @@ export default function Navigation({ isSidebar = false }) {
 
     return (
         <nav className={`${isSidebar ? "mt-4 px-6" : "text-[#616161]"}`}>
-            <ul
-                className={`${
-                    isSidebar ? "flex flex-col space-y-6" : "flex space-x-20"
-                }`}
-            >
+            <ul className={`${isSidebar ? "flex flex-col space-y-6" : "flex space-x-20"}`}>
                 {navigation.map((item) => (
-                    <li key={item.name} className="relative group">
+                    <li key={item.name} className="relative group whitespace-nowrap">
                         <Link
                             href={item.href}
                             className={`block ${
