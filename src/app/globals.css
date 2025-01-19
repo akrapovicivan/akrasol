@@ -25,3 +25,11 @@ body {
     text-wrap: balance;
   }
 }
+
+h1 {
+    @apply text-4xl font-bold;
+}
+
+h2 {
+    @apply text-2xl font-semibold;
+}

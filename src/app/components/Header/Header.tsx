@@ -1,7 +1,6 @@
 "use client";
 
 import Navigation from './Navigation';
-import styles from './header.module.css';
 import Logo from './Logo';
 import { useEffect, useState } from "react";
 
@@ -14,8 +13,8 @@ export default function Header() {
     }, []);
 
     return (
-        <header className={styles.header}>
-            <div className="flex items-center justify-between w-full p-4">
+        <header className="bg-white px-48 max-[888px]:px-16 py-4">
+            <div className="flex items-center justify-between w-full p-4 gap-16">
                 <button
                     className="block min-[888px]:hidden p-2"
                     onClick={() => setIsSidebarOpen(!isSidebarOpen)}
