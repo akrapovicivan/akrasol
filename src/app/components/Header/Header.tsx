@@ -13,7 +13,7 @@ export default function Header() {
     }, []);
 
     return (
-        <header className={`bg-white px-48 max-[888px]:px-16 ${!isSidebarOpen ? "h-[128px]" : ""}`}>
+        <header className={`sticky top-0 bg-white px-48 max-[888px]:px-16 ${!isSidebarOpen ? "h-[128px]" : ""}`}>
             <div className={`flex items-center justify-between w-full px-4 gap-16 ${!isSidebarOpen ? "h-full" : ""}`}>
                 <button
                     className="block min-[888px]:hidden p-2"

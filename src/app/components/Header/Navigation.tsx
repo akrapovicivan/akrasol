@@ -81,7 +81,7 @@ export default function Navigation({ isSidebar = false }) {
 
                         {item.subroutes && (
                             <ul
-                                className={`${styles['nav-subroute']} ${
+                                className={`${styles['nav-subroute']} z-50 ${
                                     isSidebar
                                         ? "mt-2 p-8 space-y-2"
                                         : "absolute left-0 mt-2 min-w-64 bg-white shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200"
