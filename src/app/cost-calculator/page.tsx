@@ -3,7 +3,11 @@ import { useState } from "react";
 
 const CostCalculatorPage = () => {
   const [step, setStep] = useState(1);
-  const totalSteps = 3; // Total number of steps
+  const totalSteps = 3;
+  const [calculatedCost, setCalculatedCost] = useState<number | null>(null);
+  const [showInquiryForm, setShowInquiryForm] = useState(false);
+  const [userEmail, setUserEmail] = useState("");
+  const [additionalInfo, setAdditionalInfo] = useState("");
   const [formData, setFormData] = useState({
     kwhInstalled: "",
     roofType: "",
@@ -25,17 +29,60 @@ const CostCalculatorPage = () => {
     const kwh = Number(formData.kwhInstalled);
     const isSloped = formData.roofType === "sloped";
 
-    if (isSloped) {
-      return kwh > 4 ? kwh * 1000 : kwh * 900;
-    } else {
-      return kwh > 10 ? kwh * 900 : kwh * 1000;
+    if (isNaN(kwh) || kwh <= 0) {
+      alert("Please enter a valid number for kWh Installed.");
+      return;
     }
+
+    const cost = isSloped
+      ? kwh > 4
+        ? kwh * 1000
+        : kwh * 900
+      : kwh > 10
+      ? kwh * 900
+      : kwh * 1000;
+
+    setCalculatedCost(cost);
+    return cost;
   };
 
   const handleSubmit = () => {
     const cost = calculateCost();
     console.log("Form Data:", { ...formData, cost });
-    alert(`The estimated cost is €${cost.toLocaleString()}`);
+  };
+
+  const sendInquiry = async () => {
+    try {
+      if (!userEmail) {
+        alert("Please provide your email before sending the inquiry.");
+        return;
+      }
+  
+      const response = await fetch("/api/sendInquiry", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          userEmail,
+          additionalInfo,
+          formData,
+          calculatedCost,
+        }),
+      });
+  
+      const data = await response.json();
+  
+      if (response.ok) {
+        alert("Your inquiry has been sent successfully!");
+        setShowInquiryForm(false);
+      } else {
+        alert(`Failed to send inquiry: ${data.message}`);
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      alert("An unexpected error occurred while sending your inquiry.");
+    }
   };
 
   const progress = Math.round((step / totalSteps) * 100);
@@ -181,6 +228,69 @@ const CostCalculatorPage = () => {
           </div>
         </div>
       )}
+
+      {/* Display Cost and Inquiry */}
+      {calculatedCost !== null && (
+        <div className="mt-6 p-4 bg-gray-100 rounded-md shadow-md">
+          <p className="text-lg font-semibold text-gray-800">
+            Estimated Cost: <span className="text-indigo-600">€{calculatedCost.toLocaleString()}</span>
+          </p>
+          <p className="text-sm text-gray-600 mt-3">
+            This is just an estimation until our team provides an actual quote.
+          </p>
+          <button
+            onClick={() => setShowInquiryForm(true)}
+            className="mt-5 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700"
+          >
+            Send Inquiry
+          </button>
+        </div>
+      )}
+
+      {showInquiryForm && (
+        <div className="mt-6 p-4 bg-gray-50 rounded-md shadow-md">
+          <h2 className="text-lg font-semibold text-gray-700 mb-4">Send Inquiry</h2>
+          <p className="mb-4 text-gray-600">Your inquiry will include the following information:</p>
+          <pre className="mb-4 p-3 bg-gray-100 rounded-md text-sm text-gray-800">
+        {`
+        kWh Installed: ${formData.kwhInstalled || "Not specified"}
+        Roof Type: ${formData.roofType === "sloped" ? "Sloped" : "Straight"}
+        Roof Material: ${formData.roofMaterial || "Not specified"}
+        Truck Access: ${formData.truckAccess === "yes" ? "Yes" : "No"}
+        Lightning Rod: ${formData.lightningRod === "yes" ? "Yes" : "No"}
+        Location: ${formData.location || "Not specified"}
+        Estimated Cost: €${calculatedCost?.toLocaleString() || "Not calculated yet"}
+          `}
+          </pre>
+          <label className="block mb-3">
+            <span className="text-gray-700">Your Email (required):</span>
+            <input
+              type="email"
+              className="mt-1 block h-[30px] w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+              value={userEmail}
+              onChange={(e) => setUserEmail(e.target.value)}
+              required
+            />
+          </label>
+          <label className="block mb-3">
+            <span className="text-gray-700">Additional Information:</span>
+            <textarea
+              className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+              rows={4}
+              value={additionalInfo}
+              onChange={(e) => setAdditionalInfo(e.target.value)}
+            />
+          </label>
+          <button
+            onClick={sendInquiry}
+            disabled={!userEmail}
+            className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 enabled:hover:bg-indigo-700 disabled:opacity-80 disabled:pointer-disabled disabled:cursor-not-allowed"
+          >
+            Submit Inquiry
+          </button>
+        </div>
+      )}
+
     </div>
   );
 };
