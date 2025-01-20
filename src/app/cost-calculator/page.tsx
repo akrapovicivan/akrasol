@@ -88,11 +88,11 @@ const CostCalculatorPage = () => {
   const progress = Math.round((step / totalSteps) * 100);
 
   return (
-    <div className="max-w-3xl mx-auto p-6 bg-gray-50 rounded-md shadow-md">
+    <div className="max-w-3xl mx-auto mt-64 p-6 bg-gray-50 rounded-md shadow-md">
       <div className="mb-6">
         <div className="relative w-full h-2 bg-gray-300 rounded-full">
           <div
-            className="absolute top-0 left-0 h-2 bg-indigo-600 rounded-full transition-all"
+            className="absolute top-0 left-0 h-2 bg-blue-600 rounded-full transition-all"
             style={{ width: `${progress}%` }}
           ></div>
         </div>
@@ -112,7 +112,7 @@ const CostCalculatorPage = () => {
                 <input
                 type="number"
                 name="kwhInstalled"
-                className="mt-3 block w-full h-[30px] rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+                className="mt-3 block w-full h-[30px] rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
                 value={formData.kwhInstalled}
                 onChange={handleInputChange}
                 required
@@ -122,7 +122,7 @@ const CostCalculatorPage = () => {
                 <span className="text-gray-700">Roof Type (required):</span>
                 <select
                 name="roofType"
-                className="mt-3 block w-full h-[30px] rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+                className="mt-3 block w-full h-[30px] rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
                 value={formData.roofType}
                 onChange={handleInputChange}
                 required
@@ -136,7 +136,7 @@ const CostCalculatorPage = () => {
           <button
             onClick={nextStep}
             disabled={!formData.kwhInstalled || !formData.roofType}
-            className="px-4 mt-5 block py-2 ml-auto bg-indigo-600 text-white rounded-md enabled:hover:bg-indigo-700 disabled:opacity-80 disabled:pointer-disabled disabled:cursor-not-allowed"
+            className="px-4 mt-5 block py-2 ml-auto bg-blue-600 text-white rounded-md enabled:hover:bg-blue-700 disabled:opacity-80 disabled:pointer-disabled disabled:cursor-not-allowed"
           >
             Next
           </button>
@@ -151,7 +151,7 @@ const CostCalculatorPage = () => {
                 <span className="text-gray-700">Roof Material:</span>
                 <select
                 name="roofMaterial"
-                className="mt-3 block w-full h-[30px] rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+                className="mt-3 block w-full h-[30px] rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
                 value={formData.roofMaterial}
                 onChange={handleInputChange}
                 >
@@ -166,7 +166,7 @@ const CostCalculatorPage = () => {
                 <span className="text-gray-700">Can a truck access the object?</span>
                 <select
                 name="truckAccess"
-                className="mt-3 block w-full h-[30px] rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+                className="mt-3 block w-full h-[30px] rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
                 value={formData.truckAccess}
                 onChange={handleInputChange}
                 >
@@ -180,7 +180,7 @@ const CostCalculatorPage = () => {
             <button onClick={prevStep} className="px-4 py-2 bg-gray-400 text-white rounded-md mr-3 hover:bg-gray-500">
                 Back
             </button>
-            <button onClick={nextStep} className="px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700">
+            <button onClick={nextStep} className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">
                 Next
             </button>
           </div>
@@ -195,7 +195,7 @@ const CostCalculatorPage = () => {
                 <span className="text-gray-700">Is there a lightning rod?</span>
                 <select
                 name="lightningRod"
-                className="mt-3 block w-full h-[30px] rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+                className="mt-3 block w-full h-[30px] rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
                 value={formData.lightningRod}
                 onChange={handleInputChange}
                 >
@@ -209,7 +209,7 @@ const CostCalculatorPage = () => {
                 <input
                 type="text"
                 name="location"
-                className="mt-3 block w-full h-[30px] rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+                className="mt-3 block w-full h-[30px] rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
                 value={formData.location}
                 onChange={handleInputChange}
                 />
@@ -233,7 +233,7 @@ const CostCalculatorPage = () => {
       {calculatedCost !== null && (
         <div className="mt-6 p-4 bg-gray-100 rounded-md shadow-md">
           <p className="text-lg font-semibold text-gray-800">
-            Estimated Cost: <span className="text-indigo-600">€{calculatedCost.toLocaleString()}</span>
+            Estimated Cost: <span className="text-blue-600">€{calculatedCost.toLocaleString()}</span>
           </p>
           <p className="text-sm text-gray-600 mt-3">
             This is just an estimation until our team provides an actual quote.
@@ -266,7 +266,7 @@ const CostCalculatorPage = () => {
             <span className="text-gray-700">Your Email (required):</span>
             <input
               type="email"
-              className="mt-1 block h-[30px] w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+              className="mt-1 block h-[30px] w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
               value={userEmail}
               onChange={(e) => setUserEmail(e.target.value)}
               required
@@ -275,7 +275,7 @@ const CostCalculatorPage = () => {
           <label className="block mb-3">
             <span className="text-gray-700">Additional Information:</span>
             <textarea
-              className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+              className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
               rows={4}
               value={additionalInfo}
               onChange={(e) => setAdditionalInfo(e.target.value)}
@@ -284,7 +284,7 @@ const CostCalculatorPage = () => {
           <button
             onClick={sendInquiry}
             disabled={!userEmail}
-            className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 enabled:hover:bg-indigo-700 disabled:opacity-80 disabled:pointer-disabled disabled:cursor-not-allowed"
+            className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 enabled:hover:bg-blue-700 disabled:opacity-80 disabled:pointer-disabled disabled:cursor-not-allowed"
           >
             Submit Inquiry
           </button>

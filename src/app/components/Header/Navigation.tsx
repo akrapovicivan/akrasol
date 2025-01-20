@@ -72,8 +72,8 @@ export default function Navigation({ isSidebar = false }) {
                             href={item.href}
                             className={`flex items-center ${styles['nav-route']} block ${
                                 isSidebar
-                                    ? "text-lg font-bold hover:text-[#176FD3]"
-                                    : "h-full hover:bg-[#176FD3] hover:text-white transition duration-200 p-8"
+                                    ? "text-lg font-bold hover:text-blue-600"
+                                    : "h-full hover:bg-blue-600 hover:text-white transition duration-200 p-8"
                             }`}
                         >
                             {item.name}
@@ -94,7 +94,7 @@ export default function Navigation({ isSidebar = false }) {
                                             className={`block ${
                                                 isSidebar
                                                     ? "text-sm hover:underline"
-                                                    : "p-4 hover:text-[#176FD3] transition duration-200"
+                                                    : "p-4 hover:text-blue-600 transition duration-200"
                                             }`}
                                         >
                                             {subitem.name}

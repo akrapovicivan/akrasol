@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBolt, faSackDollar, faLeaf } from '@fortawesome/free-solid-svg-icons';
 import Section from './components/Header/Section'
+import Link from 'next/link';
 
 export default function HomePage() {
     return (
@@ -10,7 +11,9 @@ export default function HomePage() {
                 <div className="min-[888px]:w-[461px] h-full bg-[#212121]/40 text-white flex flex-col justify-end p-10" >
                     <h1 className="text-5xl mb-8">Power Your Future with Solar</h1>
                     <p className="text-base mb-16">Take control of your energy with reliable, affordable, and sustainable solar solutions designed to save you money and protect the planet.</p>
-                    <button className="bg-[#176FD3] hover:bg-[#1564BE] p-8 font-bold text-xl">Get Your Free Quote</button>
+                    <Link href="/cost-calculator">
+                        <button className="bg-blue-600 hover:bg-blue-700 p-8 font-bold text-xl w-full">Get Your Free Quote</button>
+                    </Link>
                 </div>
             </div>
             <div className="p-8 px-48 max-[888px]:px-16 flex flex-col justify-center gap-x-20 gap-y-8 md:flex-row md:w-full">
