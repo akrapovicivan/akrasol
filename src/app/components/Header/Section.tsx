@@ -38,7 +38,7 @@ export default function Section({
                         color: innerBackgroundColor ? "white" : "#212121",
                 }}>
                 <span className="text-xl lg:text-2xl font-bold mb-3">{title}</span>
-                <p className="text-sm lg:text-base">{description}</p>
+                <p className="text-sm lg:text-base overflow-hidden text-ellipsis">{description}</p>
             </div>
         </div>
     );

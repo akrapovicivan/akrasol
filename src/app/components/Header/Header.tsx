@@ -13,8 +13,8 @@ export default function Header() {
     }, []);
 
     return (
-        <header className="bg-white px-48 max-[888px]:px-16 py-4">
-            <div className="flex items-center justify-between w-full p-4 gap-16">
+        <header className={`bg-white px-48 max-[888px]:px-16 ${!isSidebarOpen ? "h-[128px]" : ""}`}>
+            <div className={`flex items-center justify-between w-full px-4 gap-16 ${!isSidebarOpen ? "h-full" : ""}`}>
                 <button
                     className="block min-[888px]:hidden p-2"
                     onClick={() => setIsSidebarOpen(!isSidebarOpen)}
@@ -35,13 +35,13 @@ export default function Header() {
                         <Logo width={80} height={48} />
                     </div>
 
-                    <div className="hidden min-[888px]:block">
+                    <div className={`hidden min-[888px]:block ${!isSidebarOpen ? "h-full" : ""}`}>
                         <Navigation />
                     </div>
             </div>
             {isSidebarOpen && (
             <div className="fixed inset-0 bg-gray-800 bg-opacity-50 z-40">
-                <div className="fixed top-0 left-0 w-64 bg-white h-full shadow-md z-50 flex flex-col">
+                <div className={`fixed top-0 left-0 w-64 bg-white shadow-md z-50 flex flex-col ${isSidebarOpen ? "h-full" : ""}`}>
                     <button
                         className="p-4 self-end"
                         onClick={() => setIsSidebarOpen(false)}
