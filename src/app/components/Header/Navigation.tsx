@@ -6,6 +6,7 @@ import axios from "axios";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import styles from "./navigation.module.css";
+import { usePathname } from "next/navigation";
 
 const getOffers = async () => {
     try {
@@ -19,6 +20,7 @@ const getOffers = async () => {
 
 export default function Navigation({ isSidebar = false }) {
     const [offersSubroutes, setOffersSubroutes] = useState<Subroute[]>([]);
+    const pathname = usePathname();
 
     useEffect(() => {
         const fetchOffers = async () => {
@@ -48,10 +50,6 @@ export default function Navigation({ isSidebar = false }) {
         {
             name: "Cost Calculator",
             href: "/cost-calculator",
-            subroutes: [
-                { name: "Solar ROI Calculator", href: "/cost-calculator/roi" },
-                { name: "Savings Estimator", href: "/cost-calculator/savings" },
-            ],
         },
         {
             name: "Contact",
@@ -64,47 +62,54 @@ export default function Navigation({ isSidebar = false }) {
     ];
 
     return (
-        <nav className={`h-full ${isSidebar ? "mt-4 px-6" : "text-[#616161]"}`}>
-            <ul className={`h-full ${isSidebar ? "flex flex-col gap-y-6" : "flex"}`}>
-                {navigation.map((item) => (
-                    <li key={item.name} className={`${!isSidebar ? "h-full" : ""} relative group whitespace-nowrap`}>
-                        <Link
-                            href={item.href}
-                            className={`flex items-center ${styles['nav-route']} block ${
-                                isSidebar
-                                    ? "text-lg font-bold hover:text-blue-600"
-                                    : "h-full hover:bg-blue-600 hover:text-white transition duration-200 p-8"
-                            }`}
-                        >
-                            {item.name}
-                        </Link>
-
-                        {item.subroutes && (
-                            <ul
-                                className={`${styles['nav-subroute']} z-50 ${
+        <nav className={`h-full ${isSidebar ? "mt-4" : "text-[#616161]"}`}>
+            <ul className={`h-full ${isSidebar ? "flex flex-col gap-y-8" : "flex"}`}>
+                {navigation.map((item) => {
+                    const isActive = pathname.startsWith(item.href)
+                    
+                    return (
+                        <li key={item.name} className={`${!isSidebar ? "h-full" : ""} relative group whitespace-nowrap`}>
+                            <Link
+                                href={item.href}
+                                className={`flex items-center ${styles['nav-route']} block ${
                                     isSidebar
-                                        ? "mt-2 p-8 space-y-2"
-                                        : "absolute left-0 mt-2 min-w-64 bg-white shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200"
-                                }`}
+                                        ? "h-16 px-6 text-lg font-bold hover:bg-blue-600 hover:text-white"
+                                        : "h-full hover:bg-blue-600 hover:text-white transition duration-200 p-8"
+                                } ${
+                                    isActive
+                                        ? "bg-blue-600 text-white font-bold"
+                                        : ""}`}
                             >
-                                {item.subroutes.map((subitem) => (
-                                    <li key={subitem.name}>
-                                        <Link
-                                            href={subitem.href}
-                                            className={`block ${
-                                                isSidebar
-                                                    ? "text-sm hover:underline"
-                                                    : "p-4 hover:text-blue-600 transition duration-200"
-                                            }`}
-                                        >
-                                            {subitem.name}
-                                        </Link>
-                                    </li>
-                                ))}
-                            </ul>
-                        )}
-                    </li>
-                ))}
+                                {item.name}
+                            </Link>
+
+                            {item.subroutes && (
+                                <ul
+                                    className={`${styles['nav-subroute']} z-50 ${
+                                        isSidebar
+                                            ? "px-8 space-y-2"
+                                            : "absolute left-0 mt-2 min-w-64 bg-white shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+                                    }`}
+                                >
+                                    {item.subroutes.map((subitem) => (
+                                        <li key={subitem.name}>
+                                            <Link
+                                                href={subitem.href}
+                                                className={`block ${
+                                                    isSidebar
+                                                        ? "text-sm hover:underline"
+                                                        : "p-4 hover:text-blue-600 transition duration-200"
+                                                }`}
+                                            >
+                                                {subitem.name}
+                                            </Link>
+                                        </li>
+                                    ))}
+                                </ul>
+                            )}
+                        </li>
+                    )
+                })}
             </ul>
         </nav>
     );
