@@ -18,7 +18,7 @@ export default function Header() {
     }
 
     return (
-        <header className={`sticky h-24 top-0 z-50 bg-white px-48 max-[888px]:px-16`}>
+        <header className={`sticky h-24 top-0 z-50 bg-white px-48 max-[888px]:px-16 ${!isSidebarOpen ? "drop-shadow-xl" : ""}`}>
             <div className={`flex items-center justify-between w-full px-4 gap-16 h-full`}>
                 <button
                     className="block min-[888px]:hidden p-2"
@@ -45,7 +45,7 @@ export default function Header() {
                     </div>
             </div>
             {isSidebarOpen && (
-            <div className="fixed inset-0 z-40 min-[888px]:hidden block" >
+            <div className={`fixed inset-0 z-40 min-[888px]:hidden ${isSidebarOpen ? "block" : "hidden"}`} >
                 <div className={`fixed top-0 left-0 w-64 bg-white shadow-md z-50 flex flex-col ${isSidebarOpen ? "h-full" : ""}`}>
                     <button
                         className="p-4 self-end"
