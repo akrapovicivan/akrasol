@@ -12,9 +12,14 @@ export default function Header() {
     useEffect(() => {
     }, []);
 
+
+    const closeSidebar = () => {
+        setIsSidebarOpen(false);
+    }
+
     return (
-        <header className="bg-white px-48 max-[888px]:px-16 py-4">
-            <div className="flex items-center justify-between w-full p-4 gap-16">
+        <header className={`sticky h-24 top-0 z-50 bg-white px-48 max-[888px]:px-16 ${!isSidebarOpen ? "drop-shadow-xl" : ""}`}>
+            <div className={`flex items-center justify-between w-full px-4 gap-16 h-full`}>
                 <button
                     className="block min-[888px]:hidden p-2"
                     onClick={() => setIsSidebarOpen(!isSidebarOpen)}
@@ -35,16 +40,16 @@ export default function Header() {
                         <Logo width={80} height={48} />
                     </div>
 
-                    <div className="hidden min-[888px]:block">
+                    <div className={`hidden min-[888px]:block ${!isSidebarOpen ? "h-full" : ""}`}>
                         <Navigation />
                     </div>
             </div>
             {isSidebarOpen && (
-            <div className="fixed inset-0 bg-gray-800 bg-opacity-50 z-40">
-                <div className="fixed top-0 left-0 w-64 bg-white h-full shadow-md z-50 flex flex-col">
+            <div className={`fixed inset-0 z-40 min-[888px]:hidden ${isSidebarOpen ? "block" : "hidden"}`} >
+                <div className={`fixed top-0 left-0 w-64 bg-white shadow-md z-50 flex flex-col ${isSidebarOpen ? "h-full" : ""}`}>
                     <button
                         className="p-4 self-end"
-                        onClick={() => setIsSidebarOpen(false)}
+                        onClick={closeSidebar}
                         aria-label="Close Sidebar"
                     >
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -53,6 +58,9 @@ export default function Header() {
                     </button>
 
                     <Navigation isSidebar />
+                </div>
+                <div className="fixed bg-gray-800 bg-opacity-50 w-full h-full" onClick={closeSidebar}>
+
                 </div>
             </div>
             )}
