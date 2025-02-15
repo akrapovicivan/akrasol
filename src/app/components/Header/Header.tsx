@@ -18,8 +18,8 @@ export default function Header() {
     }
 
     return (
-        <header className={`sticky h-24 top-0 z-50 bg-white px-48 max-[888px]:px-16 ${!isSidebarOpen ? "drop-shadow-xl" : ""}`}>
-            <div className={`flex items-center justify-between w-full px-4 gap-16 h-full`}>
+        <header className={`sticky h-24 top-0 z-50 bg-white px-48 max-[888px]:px-1 ${!isSidebarOpen ? "drop-shadow-xl" : ""}`}>
+            <div className={`flex items-center justify-between w-full px-4 h-full`}>
                 <button
                     className="block min-[888px]:hidden p-2"
                     onClick={() => setIsSidebarOpen(!isSidebarOpen)}
@@ -36,7 +36,7 @@ export default function Header() {
                     </svg>
                 </button>
 
-                    <div className="mx-auto min-[888px]:mx-0">
+                    <div className="mx-auto min-[888px]:mx-0 pr-5">
                         <Logo width={80} height={48} />
                     </div>
 
@@ -57,7 +57,7 @@ export default function Header() {
                         </svg>
                     </button>
 
-                    <Navigation isSidebar />
+                    <Navigation isSidebar closeSidebar={closeSidebar} />
                 </div>
                 <div className="fixed bg-gray-800 bg-opacity-50 w-full h-full" onClick={closeSidebar}>
 
