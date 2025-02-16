@@ -2,10 +2,11 @@
 
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMapMarkerAlt, faPhone, faEnvelope, faClock } from '@fortawesome/free-solid-svg-icons';
+import { faMapMarkerAlt, faPhone, faEnvelope, faClock, faSpinner } from '@fortawesome/free-solid-svg-icons';
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleChange = (e:any) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -17,9 +18,12 @@ export default function ContactForm() {
   };
 
   const sendInquiry = async () => {
+    setIsLoading(true);
+
     try {
       if (!formData.email) {
         alert("Please provide your email before sending the inquiry.");
+        setIsLoading(false);
         return;
       }
   
@@ -41,9 +45,11 @@ export default function ContactForm() {
       } else {
         alert(`Failed to send inquiry: ${data.message}`);
       }
+      setIsLoading(false);
     } catch (error) {
       console.error("Error:", error);
       alert("An unexpected error occurred while sending your inquiry.");
+      setIsLoading(false);
     }
   };
 
@@ -122,18 +128,21 @@ export default function ContactForm() {
                     />
                 </label>
 
-            
-                <button
-                    type="submit"
-                    onClick={sendInquiry}
-                    disabled={!formData.message || !formData.email || !formData.email}
-                    className="px-4 mt-5 block py-2 ml-auto bg-blue-600 text-white rounded-md enabled:hover:bg-blue-700 disabled:opacity-40 disabled:pointer-disabled disabled:cursor-not-allowed"
-                >
-                    Submit
-                </button>
-            </form>
-        </div>
+          
+            <button
+                type="submit"
+                onClick={sendInquiry}
+                disabled={!formData.message || !formData.email || !formData.email || isLoading}
+                className="px-4 mt-5 block py-2 ml-auto bg-blue-600 text-white rounded-md enabled:hover:bg-blue-700 disabled:opacity-80 disabled:pointer-disabled disabled:cursor-not-allowed"
+            >
+                {isLoading && (
+                  <FontAwesomeIcon icon={faSpinner} spin className="w-4 h-4 mr-3" />
+                )}
+                Submit
+            </button>
+        </form>
       </div>
+    </div>
     </div>
   );
 }
