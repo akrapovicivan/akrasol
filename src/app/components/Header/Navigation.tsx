@@ -69,10 +69,14 @@ export default function Navigation({ isSidebar = false,  closeSidebar }: { isSid
     };
 
     return (
-        <nav className={`h-full ${isSidebar ? "mt-4" : "text-[#616161]"}`}>
+        <nav className={`h-full ${isSidebar ? "mt-4" : "text-black"}`}>
             <ul className={`h-full ${isSidebar ? "flex flex-col gap-y-8" : "flex"}`}>
                 {navigation.map((item) => {
-                    const isActive = pathname.startsWith(item.href)
+                    let isActive = false;
+                    if (item.subroutes?.length)
+                        isActive = !!item.subroutes.find(sub => sub.href.startsWith(item.href));
+                    else 
+                        isActive = pathname.startsWith(item.href)
                     
                     return (
                         <li key={item.name} className={`${!isSidebar ? "h-full" : ""} relative group whitespace-nowrap`}>
