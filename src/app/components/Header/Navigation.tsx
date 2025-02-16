@@ -74,7 +74,7 @@ export default function Navigation({ isSidebar = false,  closeSidebar }: { isSid
                 {navigation.map((item) => {
                     let isActive = false;
                     if (item.subroutes?.length)
-                        isActive = !!item.subroutes.find(sub => sub.href.startsWith(item.href));
+                        isActive = !!item.subroutes.find(sub => pathname.startsWith(sub.href));
                     else 
                         isActive = pathname.startsWith(item.href)
                     
