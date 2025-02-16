@@ -70,7 +70,7 @@ export default function Navigation({ isSidebar = false,  closeSidebar }: { isSid
 
     return (
         <nav className={`h-full ${isSidebar ? "mt-4" : "text-black"}`}>
-            <ul className={`h-full ${isSidebar ? "flex flex-col" : "flex"}`}>
+            <ul className={`h-full ${isSidebar ? "flex flex-col gap-y-2" : "flex"}`}>
                 {navigation.map((item) => {
                     let isActive = false;
                     if (item.subroutes?.length)
@@ -88,7 +88,7 @@ export default function Navigation({ isSidebar = false,  closeSidebar }: { isSid
                                 onClick={handleLinkClick}
                                 className={`flex items-center ${styles['nav-route']} block ${
                                     isSidebar
-                                        ? "h-16 px-6 text-lg font-bold"
+                                        ? "h-8 px-6 text-lg font-bold"
                                         : "h-full transition duration-200 p-8"
                                 }`}
                             >
