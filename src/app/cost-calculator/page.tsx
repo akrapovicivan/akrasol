@@ -1,5 +1,7 @@
 "use client"
 import { useState } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 
 const CostCalculatorPage = () => {
   const [step, setStep] = useState(1);
@@ -16,6 +18,8 @@ const CostCalculatorPage = () => {
     lightningRod: "",
     location: "",
   });
+
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -66,9 +70,12 @@ const CostCalculatorPage = () => {
   };
 
   const sendInquiry = async () => {
+    setIsLoading(true);
+
     try {
       if (!userEmail) {
         alert("Please provide your email before sending the inquiry.");
+        setIsLoading(false);
         return;
       }
   
@@ -94,9 +101,13 @@ const CostCalculatorPage = () => {
       } else {
         alert(`Failed to send inquiry: ${data.message}`);
       }
+
+      setIsLoading(false);
     } catch (error) {
       console.error("Error:", error);
       alert("An unexpected error occurred while sending your inquiry.");
+
+      setIsLoading(false);
     }
   };
 
@@ -298,9 +309,13 @@ const CostCalculatorPage = () => {
           </label>
           <button
             onClick={sendInquiry}
-            disabled={!userEmail}
+            disabled={!userEmail || isLoading}
             className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 enabled:hover:bg-blue-700 disabled:opacity-80 disabled:pointer-disabled disabled:cursor-not-allowed"
           >
+            {isLoading && (
+                              <FontAwesomeIcon icon={faSpinner} spin className="w-4 h-4 mr-3" />
+            )}
+
             Submit Inquiry
           </button>
         </div>
