@@ -39,7 +39,7 @@ export default function OffersLayout({ children }: { children: React.ReactNode }
 
     return (
         <div className='px-48 max-[888px]:px-16 py-8'>
-            <h1 className='mb-8'>Offers</h1>
+            <h1 className='mb-8'>Special Offers</h1>
             <ul className="flex flex-wrap text-sm font-medium text-center text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400" style={{ listStyle: 'none', gap: '1rem' }}>
                 {offers.map((offer: Offer) => (
                     <Link href={`/offers/${offer.id}`} key={offer.id}>
@@ -52,7 +52,7 @@ export default function OffersLayout({ children }: { children: React.ReactNode }
                     </Link>
                 ))}
             </ul>
-            <div style={{ marginTop: '1rem', border: '1px solid #ddd', padding: '1rem' }}>
+            <div>
                 {children}
             </div>
         </div>

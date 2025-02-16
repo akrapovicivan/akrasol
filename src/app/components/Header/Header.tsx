@@ -18,8 +18,8 @@ export default function Header() {
     }
 
     return (
-        <header className={`sticky h-24 top-0 z-50 bg-white px-48 max-[888px]:px-1 ${!isSidebarOpen ? "drop-shadow-xl" : ""}`}>
-            <div className={`flex items-center justify-between w-full px-4 h-full`}>
+        <header className={`sticky h-24 top-0 z-50 bg-blue-50 px-48 max-[888px]:px-16`}>
+            <div className={`flex items-center justify-between w-full h-full`}>
                 <button
                     className="block min-[888px]:hidden p-2"
                     onClick={() => setIsSidebarOpen(!isSidebarOpen)}
@@ -27,7 +27,7 @@ export default function Header() {
                 >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        className="h-6 w-6"
+                        className="h-6 w-6 text-black"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
