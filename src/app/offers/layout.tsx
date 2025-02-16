@@ -52,7 +52,7 @@ export default function OffersLayout({ children }: { children: React.ReactNode }
                     </Link>
                 ))}
             </ul>
-            <div style={{ marginTop: '1rem', border: '1px solid #ddd', padding: '1rem' }}>
+            <div>
                 {children}
             </div>
         </div>
