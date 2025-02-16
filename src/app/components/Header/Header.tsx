@@ -19,7 +19,7 @@ export default function Header() {
 
     return (
         <header className={`sticky h-24 top-0 z-50 bg-blue-100 px-48 max-[888px]:px-16`}>
-            <div className={`flex items-center justify-between w-full px-4 h-full`}>
+            <div className={`flex items-center justify-between w-full h-full`}>
                 <button
                     className="block min-[888px]:hidden p-2"
                     onClick={() => setIsSidebarOpen(!isSidebarOpen)}
