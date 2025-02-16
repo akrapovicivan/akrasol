@@ -115,9 +115,63 @@ const CostCalculatorPage = () => {
           Step {step} of {totalSteps}
         </p>
       </div>
+      {(formData.kwhInstalled || formData.roofType || formData.roofMaterial || formData.truckAccess || formData.lightningRod || formData.location) && 
+      <div>
+        <h3 className="text-gray-700">Selected details:</h3>
+        <div className="flex gap-2 flex-wrap w-full justify-between py-4 mb-4 pl-2">
+            <div className="flex flex-col gap-2">
+                {formData.kwhInstalled && (
+                    <div>
+                        <span className="font-bold">Energy Installed: </span>
+                        <span>{formData.kwhInstalled} kWh</span>
+                    </div>)
+                }
+                    
+                {formData.roofType && (
+                    <div>
+                        <span className="font-bold">Roof Type: </span>
+                        <span>{formData.roofType}</span>
+                    </div>)
+                }
+            </div>
+                
+            <div className="flex flex-col gap-2">
+                {formData.roofMaterial && (
+                    <div>
+                        <span className="font-bold">Roof Material: </span>
+                        <span>{formData.roofMaterial}</span>
+                    </div>)
+                }
+                    
+                {formData.truckAccess && (
+                    <div>
+                        <span className="font-bold">Truck Access: </span>
+                        <span>{formData.truckAccess}</span>
+                    </div>)
+                }
+            </div>
+                
+            <div className="flex flex-col gap-2">
+                {formData.lightningRod && (
+                    <div>
+                        <span className="font-bold">Lightning rod: </span>
+                        <span>{formData.lightningRod}</span>
+                    </div>)
+                }
+                    
+                {formData.location && (
+                    <div>
+                        <span className="font-bold">Location: </span>
+                        <span>{formData.location}</span>
+                    </div>)
+                }
+            </div>
+        </div>
+      </div>
+      }
       {step === 1 && (
         <div>
-          <h1 className="text-xl font-semibold text-gray-700 mb-4">Solar Details</h1>
+          <h2 className="text-gray-700 mb-4">Solar Details</h2>
           <p className="text-gray-500 text-sm mb-3">
             Fields marked <span className="text-blue-600">*</span> are required.
           </p>
@@ -161,7 +215,7 @@ const CostCalculatorPage = () => {
 
       {step === 2 && (
         <div>
-          <h2 className="text-lg font-semibold text-gray-700 mb-4">Roof Details</h2>
+          <h2 className="text-gray-700 mb-4">Roof Details</h2>
           <div className="md:flex">
             <label className="block mb-3 w-full md:w-1/2 md:pr-5">
                 <span className="text-gray-700">Roof Material:</span>
@@ -205,7 +259,7 @@ const CostCalculatorPage = () => {
 
       {step === 3 && (
         <div>
-          <h2 className="text-lg font-semibold text-gray-700 mb-4">Additional Details</h2>
+          <h2 className="text-gray-700 mb-4">Additional Details</h2>
           <div className="md:flex">
             <label className="block mb-3 w-full md:w-1/2 md:pr-5">
                 <span className="text-gray-700">Is there a lightning rod?</span>
@@ -264,7 +318,7 @@ const CostCalculatorPage = () => {
 
       {showInquiryForm && (
         <div className="mt-6 p-4 bg-gray-50 rounded-md shadow-md">
-          <h2 className="text-lg font-semibold text-gray-700 mb-4">Send Inquiry</h2>
+          <h2 className="text-gray-700 mb-4">Send Inquiry</h2>
           <p className="mb-4 text-gray-600">Your inquiry will include the following information:</p>
           <pre className="mb-4 p-3 bg-gray-100 rounded-md text-sm text-gray-800">
         {`
