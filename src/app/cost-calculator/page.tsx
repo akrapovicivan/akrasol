@@ -178,17 +178,18 @@ const CostCalculatorPage = () => {
                             Fields marked <span className="text-blue-600">*</span> are required.
                         </p>
                         <div className="md:flex">
-                            <label className="block mb-3 w-full md:w-1/2 md:pr-5">
-                                <span className="text-gray-700">kWh Installed<span className="text-blue-600 text-xl">*</span></span>
+                            <label className="block mb-3 w-full md:w-1/2 md:pr-5 relative">
+                                <span className="text-gray-700">Power generation<span className="text-blue-600 text-xl">*</span></span>
                                 <input
                                     type="number"
                                     name="kwhInstalled"
-                                    className="mt-3 px-2 block w-full h-[30px] rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                                    className="mt-3 px-2 block w-full h-[30px] rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 appearance-none [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
                                     value={formData.kwhInstalled}
                                     onChange={handleInputChange}
                                     min="1"
                                     required
                                 />
+                                <span className="absolute right-8 top-1/2 mt-2 text-gray-500">kWh</span>
                             </label>
                             <label className="block mb-3 w-full md:w-1/2 md:pl-5">
                                 <span className="text-gray-700">Roof Type<span className="text-blue-600 text-xl">*</span></span>
