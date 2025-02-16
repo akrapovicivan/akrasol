@@ -128,7 +128,7 @@ const CostCalculatorPage = () => {
       </div>
       {step === 1 && (
         <div>
-          <h1 className="text-xl font-semibold text-gray-700 mb-4">Step 1: Solar Details</h1>
+          <h1 className="text-xl font-semibold text-gray-700 mb-4">Solar Details</h1>
           <p className="text-gray-500 text-sm mb-3">
             Fields marked <span className="text-blue-600">*</span> are required.
           </p>
@@ -172,7 +172,7 @@ const CostCalculatorPage = () => {
 
       {step === 2 && (
         <div>
-          <h2 className="text-lg font-semibold text-gray-700 mb-4">Step 2: Roof Details</h2>
+          <h2 className="text-lg font-semibold text-gray-700 mb-4">Roof Details</h2>
           <div className="md:flex">
             <label className="block mb-3 w-full md:w-1/2 md:pr-5">
                 <span className="text-gray-700">Roof Material:</span>
@@ -216,7 +216,7 @@ const CostCalculatorPage = () => {
 
       {step === 3 && (
         <div>
-          <h2 className="text-lg font-semibold text-gray-700 mb-4">Step 3: Additional Details</h2>
+          <h2 className="text-lg font-semibold text-gray-700 mb-4">Additional Details</h2>
           <div className="md:flex">
             <label className="block mb-3 w-full md:w-1/2 md:pr-5">
                 <span className="text-gray-700">Is there a lightning rod?</span>
