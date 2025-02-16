@@ -18,7 +18,7 @@ export default function Section({
     innerBackgroundColor = "",
 }: SectionProps) {
     return (
-        <div className={`w-full flex ${direction} justify-between items-center mb-14 lg:mb-0 bg-cover bg-center flex-wrap lg:flex-nowrap
+        <div className={`w-full flex ${direction} justify-between items-center mb-20 lg:mb-0 bg-cover bg-center flex-wrap lg:flex-nowrap
                         ${outerBackgroundImage ? "lg:h-[363px] h-[272px]" : ""}`}
             style={{
                 backgroundImage: outerBackgroundImage ? `url(${outerBackgroundImage})` : "none",
@@ -31,8 +31,8 @@ export default function Section({
                 }}>
             </div>
 
-            <div className={`flex flex-col w-full lg:w-[40%] justify-center px-4 
-                            ${innerBackgroundColor ? "max-w-[300px] lg:h-[200px] h-[70%] p-[10px] ml-[50px]" : ""}`}
+            <div className={`flex flex-col w-full lg:w-[60%] justify-center px-8 
+                            ${innerBackgroundColor ? "max-w-96 lg:h-[80%] h-[70%] p-4 ml-[50px]" : ""}`}
                 style={{
                         backgroundColor: innerBackgroundColor,
                         color: innerBackgroundColor ? "white" : "#212121",

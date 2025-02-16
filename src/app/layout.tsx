@@ -10,7 +10,7 @@ config.autoAddCss = false;
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
         <html lang="en">
-            <body className={`${raleway.className} antialiased flex flex-col min-h-screen`}>
+            <body className={`${raleway.className} antialiased flex flex-col min-h-screen bg-white`}>
                 <Header />
                 <main className='flex-grow'>{children}</main>
                 <Footer />

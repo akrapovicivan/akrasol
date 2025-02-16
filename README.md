@@ -19,7 +19,7 @@
 ### Semester Project
 
 - Link to your production version: [**Production Version**](https://solar-wise-theta.vercel.app/) <!-- Replace with actual URL -->
-- Link to your final report: [**Final Report (TO DO)**](https://elemental-harbor-143.notion.site/SolarWise-12fdaa460b8480e3b6e8d8682f2153b0?pvs=4) <!-- Replace with actual URL -->
+- Link to your final report: [**Final Report**](https://elemental-harbor-143.notion.site/SolarWise-19bdaa460b8480faa332c016be96431c) <!-- Replace with actual URL -->
 <!-- Add more as necessary -->
 
 ### Semester Assignments
