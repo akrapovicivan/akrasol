@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import Header from './components/Header/Header';
@@ -6,6 +7,14 @@ import { raleway } from '@/shared/fonts';
 import Footer from './components/Footer/Footer';
 
 config.autoAddCss = false;
+
+export const metadata: Metadata = {
+    title: 'Akrasol',
+    description: 'A great website built with Next.js',
+    icons: {
+        icon: '/svg/logo.svg',
+    },
+};
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (

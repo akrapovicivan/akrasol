@@ -113,7 +113,7 @@ const CostCalculatorPage = () => {
 
     return (
         <div className="flex md:flex-row flex-col justify-between px-48 max-[888px]:px-16">
-            <div className={((formData.kwhInstalled || formData.roofType || formData.roofMaterial || formData.truckAccess || formData.lightningRod || formData.location) ? "w-auto flex-grow p-6 mr-0 md:mr-8 opacity-100" : "w-[0] opacity-0") 
+            <div className={((formData.kwhInstalled || formData.roofType || formData.roofMaterial || formData.truckAccess || formData.lightningRod || formData.location) ? "w-auto flex-grow p-6 mr-0 md:mr-8 opacity-100" : "w-[0] h-[0] opacity-0") 
                             + " max-w-none md:max-w-sm mt-12 bg-gray-50 rounded-md shadow-md transition-all overflow-hidden"}>
                 <h3 className="text-gray-700">Selected details:</h3>
                 <div className="flex gap-8 flex-wrap w-full justify-between py-4 mb-4 pl-2">
@@ -244,7 +244,7 @@ const CostCalculatorPage = () => {
                                 </select>
                             </label>
                             <label className="block mb-3 w-full md:w-1/2 md:pl-5">
-                                <span className="text-gray-700">Can a truck access the object?</span>
+                                <span className="text-gray-700">Truck access?</span>
                                 <select
                                     name="truckAccess"
                                     className="mt-3 block px-2 w-full h-[30px] rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
