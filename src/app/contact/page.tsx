@@ -138,7 +138,7 @@ export default function ContactForm() {
                 type="submit"
                 onClick={sendInquiry}
                 disabled={!formData.message || !formData.email || !formData.email || isLoading}
-                className="px-4 mt-5 block py-2 ml-auto bg-blue-600 text-white rounded-md enabled:hover:bg-blue-700 disabled:opacity-80 disabled:pointer-disabled disabled:cursor-not-allowed"
+                className="px-4 mt-5 block py-2 ml-auto bg-blue-600 text-white rounded-md enabled:hover:bg-blue-700 disabled:opacity-30 disabled:pointer-disabled disabled:cursor-not-allowed"
             >
                 {isLoading && (
                   <FontAwesomeIcon icon={faSpinner} spin className="w-4 h-4 mr-3" />

@@ -222,7 +222,7 @@ const CostCalculatorPage = () => {
                         <button
                             onClick={nextStep}
                             disabled={!formData.kwhInstalled || !formData.roofType}
-                            className="px-4 mt-5 block py-2 ml-auto bg-blue-600 text-white rounded-md enabled:hover:bg-blue-700 disabled:opacity-50 disabled:pointer-disabled disabled:cursor-not-allowed"
+                            className="px-4 mt-5 block py-2 ml-auto bg-blue-600 text-white rounded-md enabled:hover:bg-blue-700 disabled:opacity-30 disabled:pointer-disabled disabled:cursor-not-allowed"
                         >
                             Next
                         </button>
@@ -369,7 +369,7 @@ const CostCalculatorPage = () => {
                         <button
                             onClick={sendInquiry}
                             disabled={!userEmail || isLoading}
-                            className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 enabled:hover:bg-blue-700 disabled:opacity-80 disabled:pointer-disabled disabled:cursor-not-allowed"
+                            className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 enabled:hover:bg-blue-700 disabled:opacity-30 disabled:pointer-disabled disabled:cursor-not-allowed"
                         >
                             {isLoading && (
                               <FontAwesomeIcon icon={faSpinner} spin className="w-4 h-4 mr-3" />
