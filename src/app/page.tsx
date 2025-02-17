@@ -37,18 +37,18 @@ export default function HomePage() {
                 </div>
             </div>
             <div className='lg:px-48 sm:px-16 px-4'>
-                <Section image='/images/setup.png'
+                <Section image='/images/setup.webp'
                          title='Expert Installation'
                          description='From consultation to completion, our certified professionals ensure a seamless and efficient installation process, delivering top-tier craftsmanship you can trust.'
                          direction='flex-row'>
                 </Section>
-                <Section outerBackgroundImage='/images/panel-closeup.jpg'
+                <Section outerBackgroundImage='/images/panel-closeup.webp'
                          title='Tailored Solutions for Your Home'
                          description='We analyze your energy needs and preferences to design a custom solar solution that maximizes your savings and sustainability goals.'
                          direction='flex-row-reverse'
                          innerBackgroundColor='#212121'>
                 </Section>
-                <Section image='/images/layered-panel.png'
+                <Section image='/images/layered-panel.webp'
                          title='Innovative Solar Technology'
                          description='Discover the cutting-edge advancements powering our solar panels, from high-efficiency cells to robust durability for long-term performance.'
                          direction='flex-row-reverse'>
