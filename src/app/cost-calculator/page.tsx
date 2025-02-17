@@ -116,7 +116,7 @@ const CostCalculatorPage = () => {
     const progress = Math.round((step / totalSteps) * 100);
 
     return (
-        <div className="flex md:flex-row flex-col justify-between px-48 max-[888px]:px-16">
+        <div className="flex md:flex-row flex-col justify-between lg:px-48 sm:px-16 px-4">
             <div className={((formData.kwhInstalled || formData.roofType || formData.roofMaterial || formData.truckAccess || formData.lightningRod || formData.location) ? "w-auto flex-grow p-6 mr-0 md:mr-8 opacity-100" : "w-[0] h-[0] opacity-0") 
                             + " max-w-none md:max-w-sm mt-12 bg-gray-50 rounded-md shadow-md transition-all overflow-hidden"}>
                 <h3 className="text-gray-700">Selected details:</h3>

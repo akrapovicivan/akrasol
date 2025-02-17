@@ -8,8 +8,8 @@ export const metadata: Metadata = {
 export default function FaqPage() {
     return (
         <section className="bg-white dark:bg-gray-900">
-            <div className="px-48 max-[888px]:px-16 py-8 w-full sm:py-16">
-                <h2 className="mb-8 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Frequently asked questions</h2>
+            <div className="lg:px-48 sm:px-16 px-4 py-8 w-full sm:py-16">
+                <h1 className="mb-8 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Frequently asked questions</h1>
                 <div className="grid pt-8 text-left border-t border-gray-200 md:gap-16 dark:border-gray-700 md:grid-cols-2">
                     <div>
                         <div className="mb-10">

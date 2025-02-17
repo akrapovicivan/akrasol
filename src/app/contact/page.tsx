@@ -59,7 +59,7 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="w-full px-48 max-[888px]:px-16">
+    <div className="w-full lg:px-48 sm:px-16 px-4">
       <div className="flex flex-col mt-12 mx-auto md:justify-center md:flex-row bg-gray-50 rounded-md shadow-md md:py-8 p-8">
         <div className="md:w-2/5 md:flex md:flex-col md:justify-evenly p-6 mb-8 space-y-6">
             <div className="flex items-center space-x-4">

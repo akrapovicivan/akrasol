@@ -2,9 +2,9 @@ import Link from "next/link";
 
 export default function Footer() {
     return (
-        <footer className="mt-16 bg-gray-200 dark:bg-gray-900 px-48 max-[888px]:px-16">
+        <footer className="mt-16 bg-gray-200 dark:bg-gray-900 lg:px-48 sm:px-16 px-4">
             <div className="mx-auto w-full">
-                <div className="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-3">
+                <div className="grid grid-cols-2 gap-8 py-6 lg:py-8 md:grid-cols-3">
                     <div>
                         <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Company</h2>
                         <ul className="text-gray-500 dark:text-gray-400 font-medium">
@@ -54,7 +54,7 @@ export default function Footer() {
                         </ul>
                     </div>
                 </div>
-                <div className="px-4 py-6 flex items-center justify-between">
+                <div className="py-6 flex items-center justify-between">
                     <span className="text-sm text-gray-500 dark:text-gray-300 sm:text-center">© 2025 <Link href="https://akrasol.com/">Akrasol™</Link>. All Rights Reserved.
                     </span>
                     <div className="flex mt-4 sm:justify-center md:mt-0 space-x-5 rtl:space-x-reverse">

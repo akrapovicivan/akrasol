@@ -44,7 +44,7 @@ export default async function OfferDetailsPage({ params }: { params: { offerId: 
             <p>Ending on: {offer.attributes.EndingOn}</p>
         </div>
         */
-        <section className="bg-white px-4 py-8 antialiased dark:bg-gray-900 md:py-16">
+        <section className="bg-white py-8 antialiased dark:bg-gray-900 md:py-16">
             <div className="w-full grid rounded-lg bg-blue-50 p-4 dark:bg-blue-800 md:p-8 lg:grid-cols-12 lg:gap-8 lg:p-16 xl:gap-16 gap-8">
                 <div className="lg:col-span-5 lg:mt-0">
                     <img className="mb-4 h-56 w-56 sm:h-96 sm:w-96 md:h-full md:w-full rounded-xl aspect-square max-w-[512px] md:flex-grow" src={"/images/offers/" + params.offerId + ".webp"} alt="peripherals" />
