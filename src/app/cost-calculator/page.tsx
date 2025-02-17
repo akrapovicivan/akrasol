@@ -336,16 +336,16 @@ const CostCalculatorPage = () => {
                     <div className="mt-6 p-4 bg-gray-50 rounded-md shadow-md">
                         <h2 className="text-gray-700 mb-4">Send Inquiry</h2>
                         <p className="mb-4 text-gray-600">Your inquiry will include the following information:</p>
-                        <pre className="mb-4 p-3 bg-gray-100 rounded-md text-sm text-gray-800">
-                            {`
-            kWh Installed: ${formData.kwhInstalled || "Not specified"}
-            Roof Type: ${formData.roofType === "sloped" ? "Sloped" : "Straight"}
-            Roof Material: ${formData.roofMaterial || "Not specified"}
-            Truck Access: ${formData.truckAccess || "Not specified"}
-            Lightning Rod: ${formData.lightningRod || "Not specified"}
-            Location: ${formData.location || "Not specified"}
-            Estimated Cost: €${calculatedCost?.toLocaleString() || "Not calculated yet"}
-              `}
+                        <pre className="mb-4 p-4 md:p-8 bg-gray-100 rounded-md text-sm text-gray-800 text-elipsis overflow-scroll">
+                    {`
+kWh Installed: ${formData.kwhInstalled || "Not specified"}
+Roof Type: ${formData.roofType === "sloped" ? "Sloped" : "Straight"}
+Roof Material: ${formData.roofMaterial || "Not specified"}
+Truck Access: ${formData.truckAccess || "Not specified"}
+Lightning Rod: ${formData.lightningRod || "Not specified"}
+Location: ${formData.location || "Not specified"}
+Estimated Cost: €${calculatedCost?.toLocaleString() || "Not calculated yet"}
+    `}
                         </pre>
                         <label className="block mb-3">
                             <span className="text-gray-700">Your Email<span className="text-blue-600 text-xl">*</span></span>
