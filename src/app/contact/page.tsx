@@ -87,7 +87,7 @@ export default function ContactForm() {
             <FontAwesomeIcon icon={faClock} className="text-blue-600 text-2xl" />
             <div>
                 <h3 className="text-xl font-semibold text-gray-700">Radno vrijeme</h3>
-                <p className="text-gray-500 text-sm">Mon - Fri: 8:00 AM - 6:00 PM</p>
+                <p className="text-gray-500 text-sm">Pon - Pet: 8:00 - 18:00</p>
             </div>
             </div>
         </div>
