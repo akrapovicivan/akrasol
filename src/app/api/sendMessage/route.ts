@@ -1,39 +1,32 @@
-import nodemailer from "nodemailer";
+import { Resend } from "resend";
 import { NextResponse } from "next/server";
 
+const resend = new Resend(process.env.RESEND_API_KEY);
+
 export async function POST(req: Request) {
-    const { formData } = await req.json();
+    try {
+        const { formData } = await req.json();
 
-  console.log(formData);
-  try {
-    const transporter = nodemailer.createTransport({
-      host: "smtp.gmail.com",
-      port: 587,
-      secure: false,
-      auth: {
-        user: "ivanakrapovic0@gmail.com",
-        pass: "qmqb fjle tqnp ipaa",
-      },
-    });
+        if (!formData?.email || !formData?.name || !formData?.message) {
+            return NextResponse.json({ message: "Missing required fields" }, { status: 400 });
+        }
 
-    const mailOptions = {
-      from: '"Solar Inquiry" <ivanakrapovic0@gmail.com>',
-      to: "iakrap00@fesb.hr",
-      subject: "New Solar Panel Message",
-      text: `
-        A new imessage has been submitted:
+        const response = await resend.emails.send({
+            from: "Solar Inquiry <onboarding@resend.dev>",
+            to: [process.env.EMAIL_TO!],
+            subject: "New Solar Panel Message",
+            text: `
+        A new message has been submitted:
 
-        Name: ${formData.name }
+        Name: ${formData.name}
         Email: ${formData.email}
         Message: ${formData.message}
       `,
-    };
+        });
 
-    await transporter.sendMail(mailOptions);
-
-    return NextResponse.json({ message: "Inquiry sent successfully!" });
-  } catch (error) {
-    console.error("Error sending email:", error);
-    return NextResponse.json({ message: "Failed to send the inquiry." }, { status: 500 });
-  }
+        return NextResponse.json({ message: "Inquiry sent successfully!" });
+    } catch (error: any) {
+        console.error("Resend email failed:", error);
+        return NextResponse.json({ message: "Failed to send the inquiry." }, { status: 500 });
+    }
 }
