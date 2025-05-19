@@ -48,7 +48,7 @@ export default function Navigation({ isSidebar = false,  closeSidebar }: { isSid
                                 onClick={handleLinkClick}
                                 className={`flex items-center ${styles['nav-route']} block ${
                                     isSidebar
-                                        ? "h-8 px-6 text-lg font-bold"
+                                    ? "h-8 px-6 text-lg font-bold force-dark"
                                         : "h-full transition duration-200 p-8"
                                 }`}
                             >

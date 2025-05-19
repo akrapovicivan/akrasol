@@ -169,7 +169,7 @@ const CostCalculatorPage = () => {
                             + " max-w-none md:max-w-sm mt-12 bg-gray-50 rounded-md shadow-md transition-all overflow-hidden"}>
                 <h3 className="text-gray-700">Odabrani podaci:</h3>
                 <div className="flex gap-8 flex-wrap w-full justify-between py-4 mb-4 pl-2">
-                    <div className="flex flex-col gap-2 w-full">
+                    <div className="flex flex-col gap-2 w-full force-dark">
                         {formData.kwhInstalled && (
                             <div>
                                 <span className="font-bold">kWh: </span>
@@ -185,7 +185,7 @@ const CostCalculatorPage = () => {
                         }
                     </div>
 
-                    <div className="flex flex-col gap-2 w-full">
+                    <div className="flex flex-col gap-2 w-full force-dark">
                         {formData.roofMaterial && (
                             <div>
                                 <span className="font-bold">Materijal krova: </span>
@@ -201,7 +201,7 @@ const CostCalculatorPage = () => {
                         )}
                     </div>
 
-                    <div className="flex flex-col gap-2 w-full">
+                    <div className="flex flex-col gap-2 w-full force-dark">
                         {formData.lightningRod && (
                             <div>
                                 <span className="font-bold">Gromobran: </span>

@@ -70,3 +70,10 @@ select {
         -webkit-text-fill-color: #000000 !important; /* Safari fix */
     }
 }
+
+@media (prefers-color-scheme: dark) {
+    .force-dark {
+        color: #111 !important;
+        -webkit-text-fill-color: #111 !important; /* Safari specific */
+    }
+}
