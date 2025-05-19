@@ -49,3 +49,14 @@ select {
     padding: .5rem 1rem !important;
     @apply focus:border-blue-600 focus:outline-none focus:border-2;
 }
+
+@media (prefers-color-scheme: dark) {
+    input:disabled,
+    select:disabled,
+    textarea:disabled {
+        background-color: #2b2b2b !important;
+        color: #ccc !important;
+        -webkit-text-fill-color: #ccc !important; /* critical for Safari */
+        border-color: #444;
+    }
+}
