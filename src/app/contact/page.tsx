@@ -80,7 +80,7 @@ export default function ContactForm() {
             <FontAwesomeIcon icon={faEnvelope} className="text-blue-600 text-2xl" />
             <div>
                 <h3 className="text-xl font-semibold text-gray-700">Email</h3>
-                <p className="text-gray-500 text-sm">iakrap00@fesb.hr</p>
+                <p className="text-gray-500 text-sm">akrapovicpero@gmail.com</p>
             </div>
             </div>
             <div className="flex items-center space-x-4">
