@@ -95,8 +95,3 @@ export default function Navigation({ isSidebar = false,  closeSidebar }: { isSid
         </nav>
     );
 }
-
-interface Subroute {
-    name: string;
-    href: string;
-}

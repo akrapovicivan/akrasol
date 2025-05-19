@@ -28,7 +28,7 @@ export async function POST(req: Request) {
       User Email: ${userEmail}
     `;
 
-        const response = await resend.emails.send({
+        await resend.emails.send({
             from: "Solar Inquiry <onboarding@resend.dev>",
             to: [process.env.EMAIL_TO!],
             subject: "New Solar Panel Installation Inquiry",
