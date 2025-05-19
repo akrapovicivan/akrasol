@@ -60,3 +60,13 @@ select {
         border-color: #444;
     }
 }
+
+@media (prefers-color-scheme: dark) {
+    input,
+    select,
+    textarea {
+        background-color: #ffffff !important; /* Light background */
+        color: #000000 !important; /* Black text */
+        -webkit-text-fill-color: #000000 !important; /* Safari fix */
+    }
+}
