@@ -1,62 +1,24 @@
-"use client"
+﻿"use client"
 
-import { apiUrlBase } from "@/shared/constants";
-import { Offer } from "@/shared/interfaces";
-import axios from "axios";
 import Link from "next/link";
-import { useEffect, useState } from "react";
 import styles from "./navigation.module.css";
 import { usePathname } from "next/navigation";
 
-const getOffers = async () => {
-    try {
-        const res = await axios.get(`${apiUrlBase}/offers`);
-        return res.data.data;
-    } catch (error) {
-        console.error('Error fetching offers:', error);
-        return [];
-    }
-};
-
 export default function Navigation({ isSidebar = false,  closeSidebar }: { isSidebar?: boolean, closeSidebar?: () => void }) {
-    const [offersSubroutes, setOffersSubroutes] = useState<Subroute[]>([]);
     const pathname = usePathname();
 
-    useEffect(() => {
-        const fetchOffers = async () => {
-            try {
-                const offers = await getOffers();
-                const mappedSubroutes = offers.map((o: Offer) => ({
-                    name: o.attributes.Name,
-                    href: `/offers/${o.id}`,
-                }));
-                setOffersSubroutes(mappedSubroutes);
-            } catch (error) {
-                console.error("Error in fetchOffers:", error);
-            } finally {
-                //setLoading(false);
-            }
-        };
-
-        fetchOffers();
-    }, [])
 
     const navigation = [
         {
-            name: "Offers",
-            href: offersSubroutes.at(0)?.href ?? "/offers",
-            subroutes: offersSubroutes,
-        },
-        {
-            name: "Cost Calculator",
+            name: "Kalkulator troškova",
             href: "/cost-calculator",
         },
         {
-            name: "Contact",
+            name: "Kontakt",
             href: "/contact",
         },
         {
-            name: "FAQ",
+            name: "Česta pitanja",
             href: "/faq",
         },
     ];

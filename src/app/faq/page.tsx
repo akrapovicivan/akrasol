@@ -1,4 +1,4 @@
-import { Metadata } from "next";
+﻿import { Metadata } from "next";
 
 export const metadata: Metadata = {
     title: 'Akrasol - FAQ',
@@ -9,47 +9,47 @@ export default function FaqPage() {
     return (
         <section className="bg-white dark:bg-gray-900">
             <div className="lg:px-48 sm:px-16 px-4 py-8 w-full sm:py-16">
-                <h1 className="mb-8 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Frequently asked questions</h1>
+                <h1 className="mb-8 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Često postavljana pitanja</h1>
                 <div className="grid pt-8 text-left border-t border-gray-200 md:gap-16 dark:border-gray-700 md:grid-cols-2">
                     <div>
                         <div className="mb-10">
                             <h3 className="flex items-center mb-4 text-lg font-medium text-gray-900 dark:text-white">
                                 <svg className="flex-shrink-0 mr-2 w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path></svg>
-                                How do solar panels work?
+                                Kako solarni paneli rade?
                             </h3>
-                            <p className="text-gray-500 dark:text-gray-400">Solar panels convert sunlight into electricity using photovoltaic (PV) cells. These cells generate direct current (DC) power, which is then converted into usable alternating current (AC) by an inverter.</p>
+                            <p className="text-gray-500 dark:text-gray-400">Solarni paneli pretvaraju sunčevu svjetlost u električnu energiju pomoću fotonaponskih (PV) ćelija. Ćelije proizvode istosmjernu (DC) struju koja se pretvara u izmjeničnu (AC) putem pretvarača.</p>
                         </div>
 
                         <div className="mb-10">
                             <h3 className="flex items-center mb-4 text-lg font-medium text-gray-900 dark:text-white">
                                 <svg className="flex-shrink-0 mr-2 w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path></svg>
-                                How much do solar panels cost?
+                                Koliko koštaju solarni paneli?
                             </h3>
-                            <p className="text-gray-500 dark:text-gray-400">The cost varies based on system size, location, and available incentives. On average, a residential solar system can range from $10,000 to $30,000 before incentives.</p>
+                            <p className="text-gray-500 dark:text-gray-400">Cijena ovisi o veličini sustava, lokaciji i dostupnim poticajima. U prosjeku, kućni sustav može koštati između 10.000 i 30.000 dolara prije poticaja.</p>
                         </div>
 
                         <div className="mb-10">
                             <h3 className="flex items-center mb-4 text-lg font-medium text-gray-900 dark:text-white">
                                 <svg className="flex-shrink-0 mr-2 w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path></svg>
-                                What are the benefits of installing solar panels?
+                                Koje su prednosti ugradnje solarnih panela?
                             </h3>
-                            <p className="text-gray-500 dark:text-gray-400">Solar panels help reduce electricity bills, lower carbon footprints, increase property value, and provide energy independence.</p>
+                            <p className="text-gray-500 dark:text-gray-400">Solarni paneli smanjuju račune za struju, smanjuju ugljični otisak, povećavaju vrijednost nekretnine i omogućuju energetsku neovisnost.</p>
                         </div>
 
                         <div className="mb-10">
                             <h3 className="flex items-center mb-4 text-lg font-medium text-gray-900 dark:text-white">
                                 <svg className="flex-shrink-0 mr-2 w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path></svg>
-                                How long do solar panels last?
+                                Koliko dugo traju solarni paneli?
                             </h3>
-                            <p className="text-gray-500 dark:text-gray-400">Most solar panels have a lifespan of 25-30 years, with warranties covering at least 20-25 years of performance.</p>
+                            <p className="text-gray-500 dark:text-gray-400">Većina solarnih panela ima vijek trajanja od 25–30 godina, a jamstva obično pokrivaju najmanje 20–25 godina rada.</p>
                         </div>
 
                         <div className="mb-10">
                             <h3 className="flex items-center mb-4 text-lg font-medium text-gray-900 dark:text-white">
                                 <svg className="flex-shrink-0 mr-2 w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path></svg>
-                                Can I install solar panels on any type of roof?
+                                Mogu li ugraditi solarne panele na bilo koju vrstu krova?
                             </h3>
-                            <p className="text-gray-500 dark:text-gray-400">Most roofs can support solar panels, but factors like shading, roof material, and angle impact efficiency. A professional assessment can determine suitability.</p>
+                            <p className="text-gray-500 dark:text-gray-400">Većina krovova podržava ugradnju, no materijal, nagib i sjenčenje mogu utjecati na učinkovitost. Stručna procjena pomaže u određivanju prikladnosti.</p>
                         </div>
                     </div>
 
@@ -57,41 +57,41 @@ export default function FaqPage() {
                         <div className="mb-10">
                             <h3 className="flex items-center mb-4 text-lg font-medium text-gray-900 dark:text-white">
                                 <svg className="flex-shrink-0 mr-2 w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path></svg>
-                                Will solar panels work during cloudy days or at night?
+                                Hoće li solarni paneli raditi kada je oblačno ili noću?
                             </h3>
-                            <p className="text-gray-500 dark:text-gray-400">Solar panels still generate electricity on cloudy days, but at a reduced efficiency. At night, they do not produce power, so energy storage or grid connection is necessary.</p>
+                            <p className="text-gray-500 dark:text-gray-400">Da, ali s manjom učinkovitošću. Noću ne proizvode energiju, pa je potrebna pohrana energije ili priključak na mrežu.</p>
                         </div>
 
                         <div className="mb-10">
                             <h3 className="flex items-center mb-4 text-lg font-medium text-gray-900 dark:text-white">
                                 <svg className="flex-shrink-0 mr-2 w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path></svg>
-                                Can I store excess energy from my solar panels?
+                                Mogu li pohraniti višak energije iz solarnih panela?
                             </h3>
-                            <p className="text-gray-500 dark:text-gray-400">Yes, with a battery storage system, you can store excess energy for use during the night or power outages.</p>
+                            <p className="text-gray-500 dark:text-gray-400">Da, pomoću sustava baterija višak energije može se koristiti tijekom noći ili u slučaju nestanka struje.</p>
                         </div>
 
                         <div className="mb-10">
                             <h3 className="flex items-center mb-4 text-lg font-medium text-gray-900 dark:text-white">
                                 <svg className="flex-shrink-0 mr-2 w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path></svg>
-                                What maintenance do solar panels require?
+                                Kakvo održavanje zahtijevaju solarni paneli?
                             </h3>
-                            <p className="text-gray-500 dark:text-gray-400">Solar panels require minimal maintenance, usually just occasional cleaning and annual professional inspections to ensure efficiency.</p>
+                            <p className="text-gray-500 dark:text-gray-400">Održavanje je minimalno — povremeno čišćenje i godišnji stručni pregled kako bi se osigurala učinkovitost.</p>
                         </div>
 
                         <div className="mb-10">
                             <h3 className="flex items-center mb-4 text-lg font-medium text-gray-900 dark:text-white">
                                 <svg className="flex-shrink-0 mr-2 w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path></svg>
-                                Are there any government incentives for solar panels?
+                                Postoje li državni poticaji za solarne panele?
                             </h3>
-                            <p className="text-gray-500 dark:text-gray-400">Many regions offer tax credits, rebates, or net metering programs to make solar energy more affordable. Check local incentives for details.</p>
+                            <p className="text-gray-500 dark:text-gray-400">Mnoge regije nude porezne olakšice, subvencije ili programe otkupa viška energije. Provjerite lokalne mogućnosti.</p>
                         </div>
 
                         <div className="mb-10">
                             <h3 className="flex items-center mb-4 text-lg font-medium text-gray-900 dark:text-white">
                                 <svg className="flex-shrink-0 mr-2 w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path></svg>
-                                How long does it take to install solar panels?
+                                Koliko traje ugradnja solarnih panela?
                             </h3>
-                            <p className="text-gray-500 dark:text-gray-400">The installation process typically takes 1-3 days, but the entire process, including permits and approvals, may take several weeks.</p>
+                            <p className="text-gray-500 dark:text-gray-400">Sama instalacija traje 1–3 dana, ali kompletan postupak s dozvolama i dokumentacijom može potrajati nekoliko tjedana.</p>
                         </div>
                     </div>
                 </div>

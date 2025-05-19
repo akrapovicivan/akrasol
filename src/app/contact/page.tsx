@@ -65,14 +65,14 @@ export default function ContactForm() {
             <div className="flex items-center space-x-4">
             <FontAwesomeIcon icon={faMapMarkerAlt} className="text-blue-600 text-2xl" />
             <div>
-                <h3 className="text-xl font-semibold text-gray-700">Our Main Office</h3>
+                <h3 className="text-xl font-semibold text-gray-700">Naš glavni ured</h3>
                 <p className="text-gray-500 text-sm">Podmeje 23, Kaštela</p>
             </div>
             </div>
             <div className="flex items-center space-x-4">
             <FontAwesomeIcon icon={faPhone} className="text-blue-600 text-2xl" />
             <div>
-                <h3 className="text-xl font-semibold text-gray-700">Phone Number</h3>
+                <h3 className="text-xl font-semibold text-gray-700">Telefonski broj</h3>
                 <p className="text-gray-500 text-sm">091-110-9101</p>
             </div>
             </div>
@@ -80,24 +80,24 @@ export default function ContactForm() {
             <FontAwesomeIcon icon={faEnvelope} className="text-blue-600 text-2xl" />
             <div>
                 <h3 className="text-xl font-semibold text-gray-700">Email</h3>
-                <p className="text-gray-500 text-sm">akrasol@info.com</p>
+                <p className="text-gray-500 text-sm">iakrap00@fesb.hr</p>
             </div>
             </div>
             <div className="flex items-center space-x-4">
             <FontAwesomeIcon icon={faClock} className="text-blue-600 text-2xl" />
             <div>
-                <h3 className="text-xl font-semibold text-gray-700">Business Hours</h3>
+                <h3 className="text-xl font-semibold text-gray-700">Radno vrijeme</h3>
                 <p className="text-gray-500 text-sm">Mon - Fri: 8:00 AM - 6:00 PM</p>
             </div>
             </div>
         </div>
 
         <div className="md:w-2/5 bg-white p-6 rounded-md shadow-md">
-            <h2 className="text-xl font-semibold text-gray-700 mb-4">Contact Us</h2>
-            <p className="text-gray-500 text-sm mb-3">Fields marked <span className="text-blue-600">*</span> are required.</p>
+            <h2 className="text-xl font-semibold text-gray-700 mb-4">Kontaktirajte nas</h2>
+            <p className="text-gray-500 text-sm mb-3">Polja označena <span className="text-blue-600">*</span> su obavezna.</p>
             <form onSubmit={handleSubmit} className="space-y-4">
                 <label className="block mb-3 w-full  md:pr-5">
-                    <span className="text-gray-700">Name<span className="text-blue-600 text-xl">*</span></span>
+                    <span className="text-gray-700">Ime<span className="text-blue-600 text-xl">*</span></span>
                     <input
                         type="text"
                         name="name"
@@ -122,7 +122,7 @@ export default function ContactForm() {
                 </label>
             
                 <label className="block mb-3 w-full  md:pr-5">
-                    <span className="text-gray-700">Message<span className="text-blue-600 text-xl">*</span></span>
+                    <span className="text-gray-700">Poruka<span className="text-blue-600 text-xl">*</span></span>
                     <textarea
                         name="message"
                         placeholder="Your Message"
@@ -143,7 +143,7 @@ export default function ContactForm() {
                 {isLoading && (
                   <FontAwesomeIcon icon={faSpinner} spin className="w-4 h-4 mr-3" />
                 )}
-                Submit
+                Pošalji
             </button>
         </form>
       </div>
