@@ -32,7 +32,7 @@ export default function Section({
             </div>
 
             <div className={`flex flex-col w-full lg:w-[60%] justify-center px-8 
-                            ${innerBackgroundColor ? "max-w-96 lg:h-[80%] h-[70%] p-4 ml-[50px]" : ""}`}
+                            ${innerBackgroundColor ? "max-w-96 lg:h-[80%] h-[80%] p-4 ml-[50px]" : ""}`}
                 style={{
                         backgroundColor: innerBackgroundColor,
                         color: innerBackgroundColor ? "white" : "#212121",

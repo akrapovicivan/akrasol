@@ -44,7 +44,7 @@ export default function HomePage() {
                 </Section>
                 <Section outerBackgroundImage='/images/panel-closeup.webp'
                          title='Prilagođena rješenja za vaš dom'
-                         description='Analiziramo vaše energetske potrebe i želje kako bismo osmislili solarno rješenje po mjeri koje maksimizira vašu uštedu i doprinosi ciljevima održivosti.'
+                         description='Analiziramo vaše energetske potrebe kako bismo osmislili solarno rješenje po mjeri koje maksimizira vašu uštedu i doprinosi održivosti.'
                          direction='flex-row-reverse'
                          innerBackgroundColor='#212121'>
                 </Section>
